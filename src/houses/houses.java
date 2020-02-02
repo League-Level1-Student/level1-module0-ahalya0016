@@ -1,5 +1,7 @@
 package houses;
 
+import java.awt.Color;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class houses {
@@ -9,28 +11,37 @@ public static void main(String[] args) {
 	rob.setWindowSize(900, 900);
 	rob.setX(800);   
 	rob.setY(800);
-	
 	rob.setSpeed(100);
 	rob.turn(270);
-	rob.setPenColor(0,137,41);
 	rob.setPenWidth(10);
 	rob.penDown();
-	rob.move(25);
+
 	
-	for (int i = 0; i < 10; i++) {
-		drawHouses();
+	for (int i = 0; i < 3; i++) {
+		drawHouses(200, Color.RED);
+		drawHouses(100, Color.YELLOW);
+		drawHouses(250, Color.CYAN);
 	}
 	
 }
-static void drawHouses() {
+static void drawHouses(int height, Color color) {
+	rob.setPenColor(7,117,42);
+	rob.move(25);
+	rob.setPenColor(color);
 	rob.turn(90);
-	rob.move(100);
+	rob.move(height);
 	rob.turn(270);
 	rob.move(50);
 	rob.turn(270);
-	rob.move(100);
+	rob.move(height);
 	rob.turn(90);
-	rob.move(25);
+
+	
 }
 
+static void drawPointyRoof(int height, Color color) {
+	//copy and paste the whole drawHouses method into here
+	//make it a pointy roof
+	//instead of calling the drawHouses method, call this drawPointyRoof method for the tall houses
+}
 }
