@@ -18,9 +18,9 @@ public static void main(String[] args) {
 
 	
 	for (int i = 0; i < 3; i++) {
-		drawHouses(200, Color.RED);
-		drawHouses(100, Color.YELLOW);
-		drawHouses(250, Color.CYAN);
+		drawPointyRoof(200, Color.RED);
+		drawHouses(100, Color.MAGENTA);
+		drawPointyRoof(250, Color.CYAN);
 	}
 	
 }
@@ -43,5 +43,18 @@ static void drawPointyRoof(int height, Color color) {
 	//copy and paste the whole drawHouses method into here
 	//make it a pointy roof
 	//instead of calling the drawHouses method, call this drawPointyRoof method for the tall houses
+	
+	rob.setPenColor(7,117,42);
+	rob.move(25);
+	rob.setPenColor(color);
+	rob.turn(90);
+	rob.move(height);
+	rob.turn(315);
+	rob.move(30);
+	rob.turn(270);
+	rob.move(30);
+	rob.turn(315);
+	rob.move(height);
+	rob.turn(90);
 }
 }
