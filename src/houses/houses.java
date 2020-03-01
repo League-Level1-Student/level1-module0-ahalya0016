@@ -7,7 +7,7 @@ import org.jointheleague.graphical.robot.Robot;
 public class houses {
 	static Robot rob = new Robot();
 public static void main(String[] args) {
-	
+	rob.setWindowColor(Color.BLACK);
 	rob.setWindowSize(900, 900);
 	rob.setX(800);   
 	rob.setY(800);
@@ -18,9 +18,9 @@ public static void main(String[] args) {
 
 	
 	for (int i = 0; i < 3; i++) {
-		drawPointyRoof(200, Color.RED);
-		drawHouses(100, Color.MAGENTA);
-		drawPointyRoof(250, Color.CYAN);
+		drawHouses(200, Color.RED);
+		drawPointyRoof(100, Color.MAGENTA);
+		drawHouses(250, Color.CYAN);
 	}
 	
 }
@@ -40,10 +40,6 @@ static void drawHouses(int height, Color color) {
 }
 
 static void drawPointyRoof(int height, Color color) {
-	//copy and paste the whole drawHouses method into here
-	//make it a pointy roof
-	//instead of calling the drawHouses method, call this drawPointyRoof method for the tall houses
-	
 	rob.setPenColor(7,117,42);
 	rob.move(25);
 	rob.setPenColor(color);
